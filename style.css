@@ -18,6 +18,9 @@
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     z-index: 10;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 .viewer.active {
@@ -32,6 +35,7 @@
     font-size: 3rem;
     font-weight: bold;
     float: right;
+    margin-left: auto;
 }
 
 /* Assign this class to the inner DIV of the viewer, this will include the actual content */
