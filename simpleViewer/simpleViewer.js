@@ -4,8 +4,6 @@ const overlay = document.getElementById('viewerOverlay');
 
 const images = document.querySelectorAll(".galleryImage");
 
-let imgSrc
-
 openModalButtons.forEach(img => {
     img.addEventListener('click', (e) => {
         const modal = document.querySelector(img.dataset.modalTarget);
@@ -29,16 +27,16 @@ closeModalButtons.forEach(button => {
 })
 
 
-function openModal(modal, img) {
+function openModal(modal, imgSrc) {
     if (modal == null)
     {
         console.error("SimpleViewer::ERROR::openModal::You've tried opening an empty modal, are you sure it exists?");
         return
     }
 
-    var test = document.getElementById('viewerImage');
+    let viewerImage = document.getElementById('viewerImage');
 
-    test.src = img;
+    viewerImage.src = imgSrc;
 
     modal.classList.add('active');
     overlay.classList.add('active');
