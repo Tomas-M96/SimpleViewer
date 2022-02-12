@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simple Viewer Example Page</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="image-container">
+            <img class="viewable" src="sampleImage.jpg" data-modal-target="#viewer"/>
+            <img class="viewable" src="sampleImage.jpg" data-modal-target="#viewer"/>
+            <img class="viewable" src="sampleImage.jpg" data-modal-target="#viewer"/>
+        </div>
+        <div class="viewer" id="viewer">
+            <button data-close-button>&times;</button>
+            <div class="content">
+                <img id="viewerImage"/>
+            </div> 
+        </div>
+        <div id="viewerOverlay"></div>
+    </body>
+    <script src="simpleViewer.js"></script>
+</html>
